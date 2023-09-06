@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "TMapUISDKSample";
 
     private final static String CLIENT_ID = "";
-    private final static String API_KEY = "";//발급받은 KEY
+    private final static String API_KEY = BuildConfig.APP_KEY;//발급받은 KEY
     private final static String USER_KEY = "";
 
 

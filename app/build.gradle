@@ -2,6 +2,10 @@ plugins {
     id 'com.android.application'
 }
 
+// 프로퍼티를 선언하고, 저장한 키값을 불러온다.
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     compileSdk 33
 
@@ -11,6 +15,9 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
+
+        // 변수
+        buildConfigField "String", "APP_KEY", properties['app_key']
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
